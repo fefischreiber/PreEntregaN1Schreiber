@@ -1,0 +1,204 @@
+body header nav {
+    background-color: rgba(3, 126, 5, 0.434); }
+    body header nav li {
+      padding-inline: 10px; }
+    body header nav .logo1 {
+      height: 40px;
+      border-radius: 50% 10% 50% 0%;
+      opacity: 70%; }
+    body header nav .dropdown-menu {
+      opacity: 70%; }
+      body header nav .dropdown-menu .navdto {
+        text-align: center; }
+  
+  body .container-portada {
+    height: 330px;
+    background-size: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; }
+  
+  body .capa-gradient {
+    height: 100%;
+    position: absolute; }
+  
+  body .container-details {
+    max-width: 1200px;
+    display: inline-block; }
+    body .container-details .details {
+      height: 100%;
+      max-width: 400px;
+      color: white; }
+      body .container-details .details .details img {
+        padding: 0px;
+        margin: 0px; }
+  
+  body main {
+    padding: 30px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(195, 239, 158, 0.152);
+    text-align: center; }
+    body main h3 {
+      padding: 20px;
+      display: inline-block;
+      position: relative; }
+    body main h3::after, body main h3::before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 3px;
+      background-color: black;
+      bottom: 35px; }
+    body main h3::before {
+      left: -140px; }
+    body main h3::after {
+      right: -140px; }
+    body main .texto {
+      padding: 50px; }
+    body main section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 10px; }
+      body main section div {
+        margin: 15px; }
+        body main section div img {
+          width: 370px;
+          border: double 2px grey; }
+    body main .calendar {
+      padding: 20px 10px;
+      background-color: burlywood;
+      border-radius: 3px;
+      width: 100%;
+      max-width: 500px;
+      font-family: sans-serif; }
+      body main .calendar .calendar__header button {
+        background-color: transparent;
+        margin-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
+        cursor: pointer; }
+      body main .calendar .calendar__header .month-name {
+        color: #6e6b6b;
+        text-transform: uppercase;
+        margin-bottom: 10px; }
+      body main .calendar .calendar__header .control {
+        color: black;
+        font-weight: bold; }
+      body main .calendar .calendar__body .grid .grid__header {
+        color: aqua;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); }
+        body main .calendar .calendar__body .grid .grid__header .grid_cell {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      body main .calendar .calendar__body .grid .grid__body {
+        grid-auto-rows: 40px;
+        color: aquamarine;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); }
+        body main .calendar .calendar__body .grid .grid__body .grid_cell {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        body main .calendar .calendar__body .grid .grid__body .grid_cell--gd {
+          cursor: pointer; }
+        body main .calendar .calendar__body .grid .grid__body .grid_cell--selected {
+          color: azure;
+          background-color: black;
+          border-radius: 60%;
+          border: 2px solid white;
+          box-shadow: 0 0 0 2px burlywood inset; }
+        body main .calendar .calendar__body .grid .grid__body .grid_cell--disabled {
+          color: aqua;
+          cursor: not-allowed; }
+  
+  body .title {
+    text-align: center;
+    color: #085c5c; }
+  
+  body .calendarioi {
+    background: #70aee8;
+    width: 80%;
+    max-width: 600px;
+    margin: 1em auto;
+    padding: 5em 0; }
+    body .calendarioi .calendar__info {
+      display: flex;
+      align-items: center;
+      padding: 0 2em;
+      font-size: 1.2em;
+      text-transform: uppercase; }
+      body .calendarioi .calendar__info .calendar__prev {
+        color: #7d1907;
+        cursor: pointer;
+        font-size: 1.5em;
+        padding-right: 30px;
+        margin-left: auto; }
+      body .calendarioi .calendar__info .calendar__month {
+        padding: 1em; }
+      body .calendarioi .calendar__info .calendar__next {
+        color: #7d1907;
+        cursor: pointer;
+        font-size: 1.4em;
+        padding-left: 30px;
+        margin-right: auto; }
+    body .calendarioi .calendar__week {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 10px; }
+      body .calendarioi .calendar__week .calendar__item {
+        text-align: center;
+        line-height: 2; }
+    body .calendarioi .calendar__year {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 10px; }
+    body .calendarioi__today {
+      background: lightcoral;
+      color: white;
+      width: 50%;
+      border-radius: 50%;
+      margin: auto; }
+    body .calendarioi__last-days {
+      opacity: .3; }
+  
+  body footer {
+    background-color: rgba(4, 145, 7, 0.169);
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; }
+    body footer .sectionf1 {
+      margin: 0;
+      padding: 0;
+      text-align: right; }
+      body footer .sectionf1 .item2 {
+        height: 40px;
+        padding: 0.5rem;
+        background-color: none;
+        margin-right: 1.5rem;
+        background-color: white;
+        border-radius: 60%; }
+      body footer .sectionf1 .item3 {
+        height: 90px;
+        padding: 1.5rem;
+        position: fixed;
+        right: 3rem;
+        bottom: 1rem;
+        opacity: 80%; }
+    body footer .sectionf2 {
+      padding: 30px;
+      list-style: none;
+      text-align: center; }
+      body footer .sectionf2 .item4 {
+        list-style: none;
+        display: inline-block;
+        padding: 1rem; }
+        body footer .sectionf2 .item4 .icono {
+          height: 20px;
+          justify-content: center; }
+  
