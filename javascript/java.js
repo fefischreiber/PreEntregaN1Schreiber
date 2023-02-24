@@ -1,17 +1,12 @@
 function alquilar (numPersonas, numDias) {
-    let costoNoche;
-    if (numPersonas<= 3) {
-        costoNoche = 15000; 
-    } else {
-        costoNoche = 35000;
-    }
-    let costoTotal = costoNoche * numDias;
-    return costoTotal;
-
+    const costoNoche = numPersonas <= 3 ? 15000 : 35000;
+    const costoTotal = costoNoche * numDias;
+    return costoTotal
 }
 
+
 let nombreUsuario = prompt ("Hola! Te invitamos a que nos visites, ¿Cuál es tu nombre?");
-let numPersonas = prompt (+ nombreUsuario + " ,¿En qué tipo de departamento quieres alojarte?\n1. Hasta 3 personas\n2. Hasta 5 personas");
+let numPersonas = prompt (nombreUsuario + " ,¿En qué tipo de departamento quieres alojarte?\n1. Hasta 3 personas\n2. Hasta 5 personas");
 
 let maxPersonas; 
 if (numPersonas === "1") {
