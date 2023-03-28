@@ -24,7 +24,7 @@ if (numDias <= 0) {
     alert ("El costo total de tu alojamiento es de $ " + costoTotal + " para " + maxPersonas + " personas durante " + numDias + " días.")
 }. */
 
-
+/** 
 //Segunda preEntrega a partir de acá
   
 function alquilar(departamento, numDias) {
@@ -101,9 +101,7 @@ let diasAlojamiento = null;
 while (diasAlojamiento === null) {
     const dias = prompt("Perfecto. ¿Cuántos días te gustaría alojarte?");
     if (dias && parseInt(dias) > 0) {
-      const disponibilidadSuficiente = seleccionDepartamento.verificarDisponibilidad(
-        parseInt(dias)
-      );
+      const disponibilidadSuficiente = seleccionDepartamento.verificarDisponibilidad(parseInt(dias));
       if (disponibilidadSuficiente) {
         diasAlojamiento = parseInt(dias);
       } else {
@@ -122,9 +120,74 @@ alquilar(seleccionDepartamento, diasAlojamiento);
 
 // Actualizar la disponibilidad del departamento seleccionado
 seleccionDepartamento.disponibilidad -= diasAlojamiento;
+*/
 
 
 
+//Tercera entrega a partir de acá
 
-
+    // Objeto
+    class Departamento {
+        constructor(nombre, numHabitaciones, capacidad, disponibilidad, precioNoche) {
+          this.nombre = nombre;
+          this.numHabitaciones = numHabitaciones;
+          this.capacidad = capacidad;
+          this.disponibilidad = disponibilidad;
+          this.precioNoche = precioNoche;
+        }
   
+        calcularCostoTotal(numPersonas, numDias) {
+          return this.precioNoche * numPersonas * numDias;
+        }
+  
+        verificarDisponibilidad(numPersonas, numDias) {
+          return this.disponibilidad >= numDias && this.capacidad >= numPersonas;
+        }
+      }
+  
+      // Arrays - un departamento de cada uno
+      const departamentos = [
+        new Departamento("Lenga", 1, 3, 7, 15000),
+        new Departamento("Guindo", 2, 5, 15, 35000),
+        new Departamento("Ñire", 2, 5, 10, 35000),
+      ];
+  
+      function calcularCosto() {
+        const departamentoSeleccionado = document.getElementById("departamento").value;
+        const numPersonas = parseInt(document.getElementById("personas").value);
+        const numDias = parseInt(document.getElementById("dias").value);
+  
+        // Buscar el departamento seleccionado en el array
+        const departamento = departamentos.find((d) => d.nombre === departamentoSeleccionado);
+  
+        if (departamento) {
+          const costoTotal = departamento.calcularCostoTotal(numPersonas, numDias);
+          const disponibilidadSuficiente = departamento.verificarDisponibilidad(numPersonas, numDias);
+  
+          let mensaje = "";
+  
+          if (disponibilidadSuficiente) {
+            mensaje = `El costo total de tu alojamiento es de $${costoTotal} para ${numPersonas} personas durante ${numDias} días.`;
+            departamento.disponibilidad -= numDias;
+          } else {
+      mensaje = `Lo siento, no hay suficiente disponibilidad para el departamento ${departamento.nombre} durante los días y la cantidad de personas que has seleccionado.`;
+    }
+
+    // Actualizar la disponibilidad
+    const disponibilidadElement = document.getElementById("disponibilidad");
+if (disponibilidadElement) {
+  disponibilidadElement.textContent = departamento.disponibilidad;
+}
+    // Mostrar el mensaje 
+    document.getElementById("mensaje").textContent = mensaje;
+  }
+}
+
+// elementos 
+const botonCalcular = document.getElementById("calcular");
+const selectDepartamento = document.getElementById("departamento");
+
+
+// Agregar un evento al botón de calcular
+botonCalcular.addEventListener("click", calcularCosto);
+
