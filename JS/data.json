@@ -1,0 +1,29 @@
+[
+    {
+       "Departamento": 1,
+       "titulo": "Lenga",
+       "capacidad": "3 personas",
+       "precio": 15000,
+       "fotos": [
+          "../Lenga/Livingcocinacom.png"
+       ]
+    },
+    {
+       "Departamento": 2,
+       "titulo": "Ñire",
+       "capacidad": "5 personas",
+       "precio": 27000,
+       "fotos": [
+          "../Ñire/Living.jpeg"
+       ]
+    },
+    {
+       "Departamento": 3,
+       "titulo": "Guindo",
+       "capacidad": "5 personas",
+       "precio": 25000,
+       "fotos": [
+          "../Guindo/Living1.jpeg"
+       ]
+    }
+ ]
